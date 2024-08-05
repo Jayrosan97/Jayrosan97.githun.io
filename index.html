@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Cotizaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img id="company-logo-preview" alt="Logo de la Empresa">
+            <div class="company-info">
+                <h1>INNOVATECNOL</h1>
+                <p>Teléfono o WhatsApp: 55238726</p>
+                <p>Facebook: INNOVATECNOL</p>
+                <p>Correo: innovatecnol65@gmail.com</p>
+            </div>
+        </header>
+
+        <h2>Generar Cotización</h2>
+
+        <label for="greeting">Saludo</label>
+        <textarea id="greeting">Me dirijo a usted de la manera más respetuosa y atenta deseándole éxitos en sus labores diarios como también muchas bendiciones en su vida personal y familiar. A continuación, la presente cotización.</textarea>
+
+        <label for="client-name">Nombre del Cliente</label>
+        <input type="text" id="client-name">
+
+        <label for="client-nit">NIT del Cliente</label>
+        <input type="text" id="client-nit">
+
+        <label for="client-email">Correo Electrónico</label>
+        <input type="email" id="client-email">
+
+        <label for="client-phone">Teléfono</label>
+        <input type="text" id="client-phone">
+
+        <label for="quotation-date">Fecha</label>
+        <input type="date" id="quotation-date">
+
+        <label for="due-date">Fecha de Vencimiento</label>
+        <input type="date" id="due-date">
+
+        <label for="warranty">Garantía</label>
+        <input type="text" id="warranty" value="6 meses, garantía aplica restricciones">
+
+        <label for="down-payment">Anticipo</label>
+        <input type="text" id="down-payment" value="50% de anticipo para iniciar la instalación, 50% al finalizar la instalación">
+
+        <h2>Productos</h2>
+        <table id="products-table">
+            <thead>
+                <tr>
+                    <th>Cant.</th>
+                    <th>Descripción</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán los productos -->
+            </tbody>
+        </table>
+        <button id="add-product">Agregar Producto</button>
+
+        <h2>Observaciones</h2>
+        <textarea id="notes">El kit de instalación cuenta con 6 meses de garantía, también incluye 20 metros de cable por cámara, en caso de utilizar más cableado tendrá un costo extra e incluye sus respectivas cajas de registro para la protección de sus conectores, no incluye monitor, la garantía aplica restricciones.</textarea>
+
+        <input type="file" id="logo-upload" accept="image/*">
+        <button id="generate-pdf">Generar PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
